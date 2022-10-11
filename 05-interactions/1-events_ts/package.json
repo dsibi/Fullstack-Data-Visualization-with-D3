@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "d3": "^7.6.1"
+  },
+  "devDependencies": {
+    "@types/d3": "^7.4.0"
+  },
+  "scripts": {
+    "server": "nodemon main",
+    "dev": "tsc && concurrently \"npm run tsc\" \"npm run server\"",
+    "build": "tsc",
+    "tsc": "tsc -w"
+}
+}
