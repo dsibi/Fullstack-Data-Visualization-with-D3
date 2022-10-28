@@ -54,6 +54,7 @@ async function drawChart() {
     .nice();
   // console.log(d3.extent(dataset, yAccessor))
   // console.log(yScale.domain())
+  // console.log(yScale(yAccessor(dataset[0])));
   const colorScale = d3.scaleLinear()
     .domain(d3.extent(dataset, colorAccessor))
     .range(['skyblue', 'darkslategrey']);
@@ -161,7 +162,6 @@ async function drawChart() {
       + `calc(-100% + ${y}px)`
       + `)`);
     tooltip.style("opacity", 1);
-    ;
   }
 }
 

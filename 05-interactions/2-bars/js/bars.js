@@ -134,7 +134,7 @@ async function drawBars() {
     .style('font-size', '12px')
     .style('text-anchor', 'middle')
 
-  // draw axes
+  // 6. Draw axes
   const xAxisGenerator = d3.axisBottom().scale(xScale)
 
   const xAxis = bounds.select('.x-axis').call(xAxisGenerator)

@@ -8,7 +8,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Launch Yandex against localhost",
-            "url": "http://127.0.0.1:5500/05-interactions/3-scatter/index.html",
+            "url": "http://127.0.0.1:5501/06-making-a-map/index.html",
             "webRoot": "${workspaceFolder}"
         }
     ]

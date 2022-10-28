@@ -9,6 +9,9 @@ async function drawLineChart() {
   const xAccessor = d => dateParser(d.date)
   dataset = dataset.sort((a, b) => xAccessor(a) - xAccessor(b)).slice(0, 100)
 
+  console.log(dateParser(dataset[0].date));
+  console.log(typeof dateParser(dataset[0].date));
+
   // 2. Create chart dimensions
 
   let dimensions = {
@@ -112,7 +115,7 @@ async function drawLineChart() {
     const formatDate = d3.timeFormat("%B %A %-d, %Y")
     tooltip.select("#date")
       .text(formatDate(hoveredDate))
-    // console.log(hoveredDate);
+    console.log(xScale.invert(498));
     const getDistanceFromHoveredDate = d => Math.abs(
       xAccessor(d) - hoveredDate)
     const closestIndex = d3.leastIndex(dataset, (a, b) => (

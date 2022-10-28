@@ -5,7 +5,13 @@ async function drawLineChart() {
     // 2a. Convert the string into a JavaScript Date
     const dateParser = d3.timeParse('%Y-%m-%d');
     const xAccessor = d => dateParser(d.date);
+    
+    console.log(d3.extent(dataset, xAccessor));
+    console.log(d3.min(dataset, xAccessor));
+
     const yAccessor = d => d.temperatureMax;
+    console.log(dataset[1].temperatureMax);
+    console.log(typeof dataset[1].temperatureMax);
     // 3. Draw chart
     let dimensions = {
         width: window.innerWidth * .9,
