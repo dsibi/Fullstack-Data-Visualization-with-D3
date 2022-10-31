@@ -1,0 +1,106 @@
+.wrapper {
+  position: relative;
+}
+
+.graph1 {
+  float: left;
+  width: 90%;
+}
+
+.legend1 {
+  float: left;
+  width: 10%;
+}
+
+.line {
+  fill: none;
+  stroke: #af9358;
+  stroke-width: 2;
+}
+
+.dot {
+  fill: #8395a7;
+}
+
+.mylabels {
+  font-size: .8em;
+}
+
+.season-label {
+  text-anchor: middle;
+}
+
+.y-axis-label {
+  fill: black;
+  font-size: 1.4em;
+  /* text-anchor: middle; */
+  /* transform: rotate(-90deg); */
+}
+
+.listening-rect {
+  fill: transparent;
+  /* Default fill color is black */
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.rect {
+  stroke: rgb(40, 40, 40);
+  stroke-width: 1px;
+}
+
+.season-mean-label {
+  fill: #861818;
+  /* text-anchor: end; */
+  dominant-baseline: middle;
+  font-size: 0.6em;
+  opacity: .7;
+}
+
+.season-mean {
+  stroke: #861818;
+  stroke-width: 1px;
+  stroke-dasharray: 4;
+  opacity: .7;
+}
+
+.tooltip {
+  opacity: 0;
+  position: absolute;
+  top: -14px;
+  left: 0;
+  padding: 0.6em 1em;
+  background: #fff;
+  text-align: center;
+  line-height: 1.4em;
+  font-size: 0.9em;
+  border: 1px solid #ddd;
+  z-index: 10;
+  transition: all 0.1s ease-out;
+  pointer-events: none;
+}
+
+.tooltip:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  background: white;
+  border: 1px solid #ddd;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  transform: translate(-50%, 50%) rotate(45deg);
+  transform-origin: center center;
+  z-index: 10;
+}
+
+.tooltip-date {
+  margin-bottom: 0.2em;
+  font-weight: 600;
+  font-size: 1.1em;
+  line-height: 1.4em;
+}

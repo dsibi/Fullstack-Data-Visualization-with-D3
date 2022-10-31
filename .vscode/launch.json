@@ -8,7 +8,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Launch Yandex against localhost",
-            "url": "http://127.0.0.1:5501/06-making-a-map/index.html",
+            "url": "http://127.0.0.1:5501/07-data-visualization-basics/1-humidity-timeline/index.html",
             "webRoot": "${workspaceFolder}"
         }
     ]
