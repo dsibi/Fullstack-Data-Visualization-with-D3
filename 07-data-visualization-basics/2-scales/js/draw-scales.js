@@ -12,7 +12,7 @@ d3ColorScales.map(type => {
     container.append("div")
         .text(scaleName)
 
-    const colorScale = d3[scaleName]
+    const colorScale = d3[scaleName]                      
     drawColorRange(container, colorScale, scaleName)
   })
 })
