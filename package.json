@@ -1,0 +1,22 @@
+{
+  "name": "fullstack-data-visualization-with-d3",
+  "version": "1.0.0",
+  "description": "This is the full code that goes along with [**Fullstack D3 and Data Visualization**](https://fullstack.io/fullstack-d3).\r I'm excited that you're interested in learning d3.js and data visualization with me!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dsibi/Fullstack-Data-Visualization-with-D3.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dsibi/Fullstack-Data-Visualization-with-D3/issues"
+  },
+  "homepage": "https://github.com/dsibi/Fullstack-Data-Visualization-with-D3#readme",
+  "dependencies": {
+    "d3": "^7.6.1"
+  }
+}

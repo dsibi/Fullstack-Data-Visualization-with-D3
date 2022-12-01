@@ -47,7 +47,7 @@ async function drawLineChart() {
     .attr("width", dimensions.width)
     .attr("height", dimensions.height)
     .append("g")
-    .style("transform", `translate(${dimensions.margin.left / 2 - 10}px, ${dimensions.margin.top}px)`)
+    // .style("transform", `translate(${dimensions.margin.left / 2 - 10}px, ${dimensions.margin.top}px)`)
 
   bounds.append("defs").append("clipPath")
     .attr("id", "bounds-clip-path")
@@ -103,7 +103,7 @@ async function drawLineChart() {
       const boundaryStart = d3.max([startDate, seasonStart])
       // Which is greater? Our dataset end date, or the end of the season for the year?
       const boundaryEnd = d3.min([endDate, seasonEnd])
-      console.log(boundaryStart);
+      // console.log(boundaryStart);
       // Identify the days in our dataset that match this season's boundary
       const days = dataset.filter(d => xAccessor(d) > boundaryStart && xAccessor(d) <= boundaryEnd)
       if (!days.length) return
@@ -116,7 +116,7 @@ async function drawLineChart() {
       // console.log(seasonsData);
     })
   });
-  console.log(seasonsData);
+  // console.log(seasonsData);
   const seasons = bounds.selectAll(".season")
     .data(seasonsData)
     .enter().append("rect")
@@ -129,7 +129,10 @@ async function drawLineChart() {
     .style("opacity", .3);
 
   const lineGenerator = d3.line()
-    .x(d => xScale(xAccessor(d)))
+  .x(function (d) {
+    console.log(typeof xScale(xAccessor(d)))
+    return xScale(xAccessor(d))
+  })
     .y(d => yScale(yAccessor(d)))
     .curve(d3.curveCatmullRom.alpha(.5));
   // .curve(d3.curveBasis);
