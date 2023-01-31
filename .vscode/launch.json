@@ -8,7 +8,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Launch Yandex against localhost",
-            "url": "http://127.0.0.1:5501/08-common-charts/3a-radar2/index_3.html",
+            "url": "http://127.0.0.1:5501/08-common-charts/5-pie/index.html",
             "webRoot": "${workspaceFolder}"
         }
     ]
